@@ -14,16 +14,16 @@
 extends ../base.pug
 
 block content
-  h3 skititem
+  h3 SeekerKit Content Item
     small
 
   .btn-group
     a(href=`/skititems/${skititem.id}/edit`, class='btn btn-primary btn-sm')
       i.glyphicon.glyphicon-edit
-      span  Edit skititem
+      span  Edit Content Item
     a(href=`/skititems/${skititem.id}/delete`, class='btn btn-danger btn-sm')
       i.glyphicon.glyphicon-trash
-      span  Delete skititem
+      span  Delete Content Item
 
   .media
     .media-left
@@ -33,5 +33,5 @@ block content
         | &nbsp;
         small= skititem.publishedDate
       h5 By #{skititem.author||'unknown'}
-      p= skititem.description
+      p!= skititem.description
       small Added by #{skititem.createdBy}

@@ -69,7 +69,7 @@ router.get('/:skititem', (req, res, next) => {
       next(err);
       return;
     }
-    res.json(entity);
+	res.json(entity);
   });
 });
 
